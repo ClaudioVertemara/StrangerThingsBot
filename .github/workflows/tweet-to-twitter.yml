@@ -1,0 +1,22 @@
+name: Tweet to Twitter
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v3
+      - name: Setup python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.8
+      - name: Setup tweepy
+        run: pip install tweepy
+      - name: Execute py script
+        run: | 
+          python main.py
+        env:
+          API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          API_KEY_SECRET: ${{ secrets.TWITTER_API_KEY_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
