@@ -1,5 +1,5 @@
 # Stranger Things Bot
-Twitter Bot written in Python 🐍 that counts down the days 📆 left until the premiere of Stranger Things 4 Volume 1 &amp; 2.
+Twitter Bot written in Python 🐍 that counts down the days left until the premiere of Stranger Things 4 Volume 1 &amp; 2.
 
 Follow the bot [@Countdown_ST](https://twitter.com/Countdown_ST) on Twitter.
 
