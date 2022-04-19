@@ -1,7 +1,11 @@
 name: Tweet to Twitter
 on:
   schedule:
-    - cron: "0 7 * * *"
+    - cron: "0 7 * * *"     # runs at 07:00 UTC everyday
+    - cron: "0 8-23 26 5 *" # runs every hour from 08:00 to 23:00 UTC on May 26th
+    - cron: "0 0-6 27 5 *"  # runs every hour from 00:00 to 06:00 UTC on May 27th
+    - cron: "0 8-23 30 6 *" # runs every hour from 08:00 to 23:00 UTC on June 30th
+    - cron: "0 0-6 1 7 *"   # runs every hour from 00:00 to 06:00 UTC on July 1st
 jobs:
   build:
     runs-on: ubuntu-latest

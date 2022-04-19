@@ -1,6 +1,6 @@
 import os
 import tweepy
-from datetime import date
+from datetime import datetime
 
 def tweet(tweet_text):
     API = tweepy.Client(
@@ -13,23 +13,28 @@ def tweet(tweet_text):
     API.create_tweet(text=tweet_text)
 
 def create_tweet():
-    today = date.today()
-    st4_vol1 = date(2022, 5, 27)
-    st4_vol2 = date(2022, 7, 1)
+    now = datetime.utcnow()
+    st4_vol1 = datetime(2022, 5, 27, 7)
+    st4_vol2 = datetime(2022, 7, 1, 7)
     
-    days_left = (st4_vol1 - today).days
+    if ((st4_vol1 - now).days >= -1): 
+        premiere_date = st4_vol1
+        premiere_date_str = "May 27, 2022"
+        volume = 1
+    else:
+        premiere_date = st4_vol2
+        premiere_date_str = "July 1, 2022"
+        volume = 2
+    
+    days_left = (premiere_date - now).days
+    time_left = str(premiere_date - now).split(":")
     
     if days_left > 0:
-        return f"{days_left} days left until Stranger Things 4 Volume 1 premieres on May 27, 2022"
+        return f"{days_left} days left until Stranger Things 4 Volume {volume} premieres on {premiere_date_str}"
     elif days_left == 0:
-        return f"Stranger Things 4 Volume 1 is Out Now!"
-    
-    days_left = (st4_vol2 - today).days
-    
-    if days_left > 0:
-        return f"{days_left} days left until Stranger Things 4 Volume 2 premieres on July 1, 2022"
-    elif days_left == 0:
-        return f"Stranger Things 4 Volume 2 is Out Now!"
+        return f"{time_left[0]} hours and {time_left[1]} minutes left until Stranger Things 4 Volume {volume} premieres on {premiere_date_str}"
+    elif days_left == -1:
+        return f"Stranger Things 4 Volume {volume} is Out Now!"
     
     return None
 
