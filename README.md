@@ -3,7 +3,7 @@ Twitter Bot written in Python 🐍 that counts down to the premiere of Stranger 
 
 Follow [@STCDBot](https://twitter.com/STCDBot) on Twitter.
 
-Inspired by the [End of Year Countdown Bot](https://github.com/amadejpapez/EndOfYearCountdown) by amadejpapez.
+Inspired by the [End of Year Countdown Bot](https://github.com/amadejpapez/EndOfYearCountdown) by [amadejpapez](https://github.com/amadejpapez).
 
 ## How does it work?
 The Python script starts by creating the tweet text. It gets the current date and calculates the difference between today and the volume 1 premiere date. 
