@@ -12,4 +12,4 @@ If the difference is more than 24 hours, the tweet will display the number of da
 
 The [Tweepy](https://www.tweepy.org) Python Library is then used to communicate with the [Twitter API](https://developer.twitter.com/en/docs/twitter-api) and post the tweet. 
 
-The script is ran using [Github Actions](https://github.com/features/actions) and is scheduled to run on a daily basis at 7 AM UTC and on an hourly basis starting 24 hours before each premiere.
+The script is ran using [Github Actions](https://github.com/features/actions) and is scheduled to run on a daily basis at 6 AM UTC and on an hourly basis starting 24 hours before each premiere.
