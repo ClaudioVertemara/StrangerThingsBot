@@ -1,5 +1,7 @@
 # Stranger Things Bot
-Twitter Bot written in Python 🐍 that counts down to the premiere of Stranger Things 4 Volume 1 &amp; 2.
+Twitter Bot written in Python 🐍 that counted down to the premiere of Stranger Things 4 Volume 1 &amp; 2. 
+
+The bot will be updated to count down to the premiere of Stranger Things 5 once a release date is officially announced.
 
 Follow [@STCDBot](https://twitter.com/STCDBot) on Twitter.
 
